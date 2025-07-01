@@ -1,0 +1,1657 @@
+/*--------------------------------------------------------------------- File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(css/font-awesome.min.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(swiper.min.css);
+@import url(slick.css);
+@import url(jquery.fancybox.min.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
+
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box !important;
+    transition: ease all 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.80857;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+/* Memaksa menu navigasi agar selalu berada di kanan pada layar besar */
+@media (min-width: 992px) {
+    .navbar .navbar-collapse {
+        display: flex;
+        justify-content: flex-end; /* Mendorong semua item di dalamnya ke kanan */
+    }
+}
+
+a {
+    color: #1f1f1f;
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 0;
+    font-weight: normal;
+    position: relative;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    line-height: normal;
+    color: #111111;
+    margin: 0
+}
+
+h1 {
+    font-size: 24px
+}
+
+h2 {
+    font-size: 22px
+}
+
+h3 {
+    font-size: 18px
+}
+
+h4 {
+    font-size: 16px
+}
+
+h5 {
+    font-size: 14px
+}
+
+h6 {
+    font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;
+    text-decoration: none!important;
+    opacity: 1
+}
+
+button:focus {
+    outline: none;
+}
+
+ul,
+li,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+p {
+    margin: 20px;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none !important;
+}
+
+a,
+.btn {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ :focus {
+    outline: 0;
+}
+
+.paddind_bottom_0 {
+    padding-bottom: 0 !important;
+}
+
+.btn-custom {
+    margin-top: 20px;
+    background-color: transparent !important;
+    border: 2px solid #ddd;
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767676;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+    border: none !important;
+}
+
+.badge {
+    font-weight: 500;
+}
+
+blockquote {
+    margin: 20px 0 20px;
+    padding: 30px;
+}
+
+button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.full {
+    float: left;
+    width: 100%;
+}
+
+.layout_padding {
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
+.padding_0 {
+    padding: 0px;
+}
+
+
+/* header section start */
+
+.header_section {
+    width: 100%;
+    float: left;
+    height: auto;
+    background-image: url(../images/banner-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.header_bg {
+    background: #fb6818;
+    border-bottom: 1px solid #ffffff;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.mr-auto,
+.mx-auto {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar-nav.ml-auto {
+    display: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 5px 5px 0px 5px;
+    margin: 10px 40px 0px 0px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffffff;
+    background-color: #ed1c24;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #ffffff;
+    background-color: #ed1c24;
+}
+
+.navbar-brand {
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.navbar {
+    padding: 15px 0px;
+}
+
+.custom_bg {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.custom_menu {
+    width: 80%;
+    float: left;
+    padding: 15px 0px 15px 0px;
+}
+
+.custom_menu ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.custom_menu li a{
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 7px 20px 7px 20px;
+    text-transform: uppercase;
+    background-color: transparent;
+    margin: 0px 7px;
+    border-radius: 5px;
+}
+
+.custom_menu li a:hover{
+    color: #ffffff;
+    background-color: #ed1c24;
+}
+
+.custom_menu li.active a{
+    color: #ffffff;
+    background-color: #ed1c24;
+}
+
+.search_btn {}
+
+.search_btn ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.search_btn li {
+    float: left;
+    font-size: 18px;
+    color: #dedcdc;
+    padding: 0px 35px 0px 35px;
+}
+
+.search_btn li a {
+    color: #dedcdc;
+}
+
+.search_btn li a:hover {
+    color: #ed1c24;
+}
+
+
+/* header section end */
+
+
+/* banner section start */
+
+.banner_section {
+    width: 100%;
+    float: left;
+    padding-top: 0px;
+    padding-bottom: 100px;
+}
+
+.banner_taital_1 {
+    width: 100%;
+    float: left;
+    font-size: 20px;
+    color: #fccf6d;
+    padding-bottom: 0px;
+    padding-top: 70px;
+}
+
+.banner_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 50px;
+    padding-top: 90px;
+}
+
+.banner_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #262626;
+    margin: 0px;
+    padding-top: 30px;
+}
+
+.read_bt {
+    width: 180px;
+    float: left;
+    padding-top: 50px;
+}
+
+.read_bt a {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    background-color: #ed1c24;
+    color: #fefefd;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.read_bt a:hover {
+    color: #0c0c01;
+    background-color: #f7f5f5;
+}
+
+#my_slider a.carousel-control-prev {
+    left: 20px;
+    top: 170px;
+}
+
+#my_slider a.carousel-control-next {
+    right: 20px;
+    top: 170px;
+}
+
+#my_slider .carousel-control-next,
+#my_slider .carousel-control-prev {
+    width: 55px;
+    height: 55px;
+    opacity: 1;
+    font-size: 30px;
+    color: #3f4140;
+    background-color: #ffffff;
+    border-radius: 100%;
+    font-weight: bold;
+    border: 6px solid #232884;
+}
+
+#my_slider .carousel-control-next:focus,
+#my_slider .carousel-control-next:hover,
+#my_slider .carousel-control-prev:focus,
+#my_slider .carousel-control-prev:hover {
+    color: #fefefd;
+    background-color: #232884;
+}
+
+
+/* banner section end */
+
+/* domain section start */
+
+.domain_section{
+    width: 100%;
+    float: left;
+}
+
+.domain_box {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    height: auto;
+    border-radius: 40px;
+    padding: 5px 0px 10px 0px; 
+    box-shadow: 0px 0px 20px 0px;
+    position: relative;
+    top: -70px;
+}
+
+.domain_rate {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+}
+
+.domain_rate ul {
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+    display: inline-block;
+}
+
+.domain_rate li{
+    float: left;
+    font-size: 16px;
+    color: #272b91;
+    padding: 0px 50px;
+}
+
+.domain_rate li a{
+    color: #272b91;
+}
+
+.domain_rate li a:hover{
+    color: #8b2791;
+}
+
+.domain_main {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+    color: #000;
+    padding: 10px;
+    font-size: 17px;
+    border: 0px;
+    float: left;
+    width: 78%;
+    background: #ffffff;
+    box-shadow: 0px 0px 40px 0px #ededed;
+}
+
+form.example button {
+  float: right;
+  width: 20%;
+  padding: 10px;
+  background: #ed1c24;
+  color: white;
+  font-size: 17px;
+  border-left: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form.example button:hover {
+    background: #ed1c24;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* domain section end */
+
+/* about section start */
+
+.about_section {
+    width: 100%;
+    float: left;
+    padding: 90px 0px;
+}
+
+.about_box {
+    width: 100%;
+    background-color: #ffffff;
+    height: auto;
+    padding: 0px 20px 30px 20px;
+    box-shadow: 0px 0px 50px 0px #ebebeb;
+    position: relative;
+}
+
+.icon_1 {
+    width: 100%;
+    text-align: center;
+    top: -40px;
+    position: relative;
+}
+
+.faster_text{
+    width: 100%;
+    font-size: 20px;
+    color: #3f3f41;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lorem_text {
+    width: 80%;
+    font-size: 16px;
+    color: #3f3f41;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* about section end */
+
+/* hosting section start */
+
+.hosting_section {
+    width: 100%;
+    float: left;
+    padding: 40px 0px 60px 0px;
+    background-image: url(../images/about-bg.png);
+    height: auto;
+    background-size: 100% 100%;
+}
+
+.hosting_img {
+    display: none;
+}
+
+.hosting_taital{
+    width: 100%;
+    float: left;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Sen', sans-serif;
+}
+
+.hosting_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0px;
+    border: 1px solid #fff;
+    padding: 40px 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.click_bt{
+    width: 170px;
+    float: left;
+    margin-top: 30px;
+}
+
+.click_bt a{
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ed1c24;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.click_bt a:hover{
+    color: #252525;
+    background-color: #ffffff;
+}
+
+/* hosting section end */
+
+/* pricing section start */
+
+.pricing_section{
+    width: 100%;
+    float: left;
+    padding-bottom: 90px;
+}
+
+.pricing_taital{
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #070101;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Sen', sans-serif;
+}
+
+.pricing_text{
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #070101;
+    text-align: center;
+    margin: 0px;
+}
+
+.pricing_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 70px;
+}
+
+.pricing_box {
+    width: 100%;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid #ad9ed5;
+    padding: 30px;
+}
+
+.number_text {
+    width: 55px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    margin: 0 auto;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    border-radius: 100%;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+.cloud_text{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #070101;
+    font-weight: bold;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.dolor_text{
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #363637;
+    padding-bottom: 0px;
+}
+
+.monthly_text{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #272b91;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+}
+
+.band_text {
+    width: 60%;
+    text-align: center;
+    font-size: 16px;
+    color: #2f2f2f;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.signup_bt {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.signup_bt a {
+    width: 100%;
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #3d51d0;
+    padding: 12px 51px;
+    border-radius: 5px;
+}
+
+.signup_bt a:hover {
+    color: #ffffff;
+    background-color: #ed1c24;
+}
+
+.pricing_box:hover {
+    border: 1px solid #272b91;
+    background-color: #272b91;
+}
+
+.pricing_box:hover .number_text{
+    border: 1px solid #272b91;
+    color: #37139a;
+}
+
+.pricing_box:hover .cloud_text{
+    color: #ffffff;
+}
+.pricing_box:hover .monthly_text{
+    color: #ffffff;
+}
+.pricing_box:hover .dolor_text{
+    color: #ffffff;
+}
+
+.pricing_box:hover .band_text{
+    color: #ffffff;
+}
+
+.pricing_box:hover .signup_bt a{
+    color: #ffffff;
+    background-color: #ed1c24;
+}
+
+/* pricing section start */
+
+/* services section start */
+
+.services_section {
+    width: 100%;
+    float: left;
+    background-color: #272b91;
+    height: auto;
+    background-size: 100%;
+    padding: 90px 0px;
+}
+
+.services_taital{
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Sen', sans-serif;
+}
+.services_text{
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0px;
+}
+
+.services_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 90px;
+}
+
+.services_icon {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    min-height: 160px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wordpress_text {
+    width: 100%;
+    float: left;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.opposed_text {
+    width: 80%;
+    font-size: 16px;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: center;
+}
+
+.services_icon .image_2 {
+    display: none;
+}
+
+.services_icon:hover .image_2 {
+    display: block;
+}
+
+.services_icon:hover .image_1 {
+    display: none;
+}
+
+
+#main_slider a.carousel-control-prev {
+    left: 0px;
+    top: 365px;
+    right: 70px;
+}
+
+#main_slider a.carousel-control-next {
+    right: 0px;
+    top: 365px;
+    left: 70px;
+    color: #8f9091;
+}
+
+#main_slider .carousel-control-next,
+#main_slider .carousel-control-prev {
+    width: 65px;
+    height: 65px;
+    opacity: 1;
+    font-size: 30px;
+    color: #3f4140;
+    background-color: #ffffff;
+    border-radius: 100%;
+    font-weight: bold;
+    border: 6px solid #232884;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main_slider .carousel-control-next:focus,
+#main_slider .carousel-control-next:hover,
+#main_slider .carousel-control-prev:focus,
+#main_slider .carousel-control-prev:hover {
+    color: #8f9091;
+}
+
+
+/* services section end */
+
+/* testimonial section start */
+
+.testimonial_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 200px;
+}
+
+.testimonial_taital{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #040403;
+    font-family: 'Sen', sans-serif;
+}
+
+.testimonial_text{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: #070101;
+    margin: 0px;
+}
+
+.testimonial_section_2 {
+    width: 100%;
+    border: 6px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.ipsum_text{
+    width: 100%;
+    font-size: 16px;
+    color: #030000;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+}
+
+.quick_img {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.client_img {
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+.client_name{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #030000;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.carousel-indicators .active {
+    background-color: #272b91;
+}
+
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    background-color: #ed1c24;
+    border-radius: 100%;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+/* testimonial section end */
+
+/* newslatter section start */
+
+.newslatter_section {
+    width: 100%;
+    float: left;
+    background-color: #e4e4e4;
+    height: auto;
+    background-size: 100%;
+}
+
+.newslatter_taital{
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #333333;
+    font-weight: bold;
+}
+
+input.mail {
+    border-radius: 5px;
+    padding: 10px 15px !important;
+}
+
+/* newslatter section end */
+/* contact section start */
+
+.contact_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 90px;
+}
+
+.contact_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #070101;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Sen', sans-serif;
+}
+
+.contact_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 55px;
+}
+
+.padding_left_0 {
+    padding-left: 0px;
+}
+
+.mail_section_1 {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.mail_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #414140;
+    background-color: #ffffff;
+    border: 1px solid #aaaaa9;
+    padding: 11px 20px;
+    margin-top: 20px;
+}
+
+input.mail_text::placeholder {
+    color: #414140;
+}
+
+.massage-bt {
+    color: #414140;
+    width: 100%;
+    height: 110px;
+    font-size: 18px;
+    background-color: #ffffff;
+    border: 1px solid #aaaaa9;
+    padding: 40px 20px 0px 20px;
+    height: 110px;
+    margin-top: 20px;
+}
+
+textarea#comment.massage-bt::placeholder {
+    color: #ecec0b;
+}
+
+.send_bt {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.send_bt a {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #fefefd;
+    background-color: #ed1c24;
+    padding: 14px;
+    margin-top: 40px;
+    display: block;
+    border-radius: 5px;
+}
+
+.send_bt a:hover {
+    color: #fefefd;
+    background-color: #fff4f4;
+}
+
+/* contact section end */
+
+/* footer section start */
+/* =================================
+   CSS UNTUK FOOTER SECTION
+   ================================= */
+
+/* Tata letak dasar untuk layar besar (Desktop) */
+.footer-section {
+    display: flex; /* Mengaktifkan Flexbox */
+    justify-content: space-around; /* Memberi jarak antar kolom */
+    align-items: flex-start; /* Membuat kolom rata atas */
+    padding: 40px 20px;
+    background-color: #0d2d6d; /* Warna latar seperti di screenshot */
+    color: white;
+    flex-wrap: wrap; /* Izinkan wrap jika perlu */
+}
+
+.footer-column {
+    flex: 1; /* Memberi lebar yang fleksibel untuk setiap kolom */
+    min-width: 300px; /* Lebar minimum sebelum menumpuk */
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Style untuk ikon sosial media */
+.social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+
+/* =================================================
+   CSS RESPONSIVE UNTUK LAYAR KECIL (MOBILE)
+   ================================================= */
+
+/* Media Query ini akan aktif jika lebar layar 768px atau kurang */
+@media (max-width: 768px) {
+    .footer-section {
+        /* Mengubah layout menjadi tumpukan vertikal */
+        flex-direction: column;
+        
+        /* Membuat konten di tengah secara horizontal */
+        align-items: center; 
+        text-align: center;
+    }
+
+    .footer-column {
+        /* Memberi jarak antar kolom saat bertumpuk */
+        margin-bottom: 40px; 
+    }
+
+    .footer-column:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Memastikan ikon sosial tetap di tengah */
+    .social-icons {
+        justify-content: center;
+    }
+}
+.footer_section {
+    width: 100%;
+    float: left;
+    background-color: #272b91;
+    height: auto;
+    padding: 80px 0px 50px 0px;
+    margin-top: 100px;
+    border-top: 2px solid #ffffff;
+}
+
+.footer_text {
+    width: 100%;
+    float: none;
+    font-size: 24px;
+    color: #ffffff;
+    font-family: 'Sen', sans-serif;
+    margin-bottom: 25px;
+}
+
+.social_icon {
+    width: 100%;
+    float: left;
+    margin-top: 0;
+}
+
+.social_icon ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.social_icon li {
+    float: left;
+}
+
+.social_icon li a {
+    float: left;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #fefefd;
+    border-radius: 50%;
+    font-size: 16px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social_icon li a:hover {
+    background-color: #ed1c24;
+    border-color: #ed1c24;
+}
+
+.location_text {
+    width: 100%;
+    float: left;
+}
+
+.location_text ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.location_text li {
+    font-size: 16px;
+    color: #ffffff;
+    padding-bottom: 15px;
+}
+
+.location_text li a {
+    color: #ffffff;
+    display: flex;
+    align-items: flex-start;
+}
+
+.location_text li a:hover {
+    color: #ed1c24;
+}
+
+.padding_left_10 {
+    padding-right: 10px;
+    flex-shrink: 0;
+}
+
+
+/* === STYLE BARU UNTUK SLIDER GALERI DI FOOTER === */
+.carousel.slide {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.footer-carousel-img {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100) brightness(2);
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.carousel-indicators {
+    margin-bottom: 0.5rem;
+}
+
+.carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators .active {
+    background-color: #ed1c24;
+}
+
+
+/* === Koreksi Jarak Kolom Find Us === */
+.footer_section .row .col-lg-3:nth-child(2) {
+    margin-left: -10px; 
+}
+/* === Koreksi Jarak Kolom Address === */
+.footer_section .row .col-lg-3:nth-child(3) {
+    margin-left: -25px; /* Geser kolom ketiga ('Address') ke kiri. Sesuaikan nilainya. */
+}
+
+/* === Style untuk Bagian Join Our Community === */
+.footer_section .col-lg-3:nth-child(4) .footer_text {
+    color: #ffffff; 
+    margin-bottom: 30px; 
+    margin-left: 40px;
+    font-size: 26px; 
+    font-weight: normal; 
+}
+
+.footer_section .col-lg-3:nth-child(4) p.footer_p_text {
+    color: #d4d4d4; 
+    font-size: 16px; 
+    line-height: 1.6; 
+    margin: 0 0 25px 0;
+    margin-left: 40px;
+    padding: 0;
+}
+
+.footer_section .col-lg-3:nth-child(4) .join-now-button {
+    background-color: #e53935; 
+    color: #ffffff;
+    padding: 12px 30px; 
+    margin-left: 40px;
+    border-radius: 8px;
+    font-size: 18px; 
+    font-weight: normal;
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+    border: none;
+    box-shadow: 2px 2px 5px #fff); 
+}
+
+.footer_section .col-lg-3:nth-child(4) .join-now-button:hover {
+    background-color: #b71c1c; 
+}
+
+/* EFEK KLIK BARU MENGGUNAKAN CLASS DARI JAVASCRIPT */
+.footer_section .col-lg-3:nth-child(4) .join-now-button.button-sedang-diklik {
+    background-color: #ffffff; /* Latar menjadi putih */
+    color: #e53539;           /* Teks menjadi merah */
+    transform: translateY(1px); /* Opsi: efek tombol tertekan */
+}
+.footer_section .col-lg-3:nth-child(4) .join-now-button:active {
+    background-color: #ffffff; /* Latar menjadi putih saat diklik */
+    color: #e53935; /* Teks menjadi merah agar tetap terlihat */
+    transform: translateY(1px); /* Efek tombol seperti ditekan (opsional) */
+    box-shadow: 1px 1px 3px rgb(255, 255, 255); /* Bayangan lebih kecil (opsional) */
+}
+
+/* footer section end */
+
+/* copyright section start */
+.copyright_section {
+    width: 100%;
+    float: left;
+    background-color: #272b91;
+    height: auto;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.copyright_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #f3feff;
+    text-align: center;
+    margin: 0; /* Reset margin */
+}
+
+.designer_text {
+    margin-top: 10px; /* Jarak dari copyright text */
+    margin-bottom: 0;
+    color: #fdf9f9;
+    font-size: 14px;
+}
+.designer_text strong {
+    font-weight: bold;
+}
+.designer_text a {
+    color: #e53935;
+    text-decoration: none;
+}
+.designer_text a:hover {
+    text-decoration: underline;
+}
+
+.copyright_text a {
+    color: #f3feff; /* Sesuaikan warna link dengan teks */
+}
+
+.copyright_text a:hover {
+    color: #ed1c24;
+}
+
+
+/* copyright section end */
+
+.margin_top90 {
+    margin-top: 90px;
+
+}
+/* ========================================= */
+/* == PERBAIKAN FINAL UNTUK LAYOUT FOOTER == */
+/* ========================================= */
+/* Menghilangkan 'float' yang merusak grid pada judul-judul footer */
+.footer_section .footer_text {
+    float: none;
+}
+/* ================================================= */
+/* == KODE CSS BARU TOTAL UNTUK FOOTER & COPYRIGHT == */
+/* ================================================= */
+
+.site-footer {
+    background-color: #272b91;
+    color: #ffffff;
+    padding: 60px 0 0 0;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    /* MENGGUNAKAN CSS GRID */
+    display: grid;
+    /* Membuat 4 kolom di layar besar, dan otomatis menyesuaikan di layar kecil */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Jarak antar kolom */
+}
+
+/* Tidak perlu properti flex lagi di sini */
+.footer-column {
+    /* Kosongkan atau hapus properti flex dari sini */
+}
+
+.footer-column h4 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-family: 'Sen', sans-serif;
+    padding: 0;
+}
+
+.footer-social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 15px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.footer-social-icons a:hover {
+    background-color: #ed1c24;
+    border-color: #ed1c24;
+}
+
+.footer-address-list {
+    list-style: bloc;
+    padding: 0;
+    margin: 0;
+}
+.footer-address-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    font-size: 15px;
+    overflow-wrap: break-word; /* Tetap pertahankan untuk teks panjang */
+}
+.footer-address-list i {
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.footer-column p {
+    margin: 0 0 15px 0;
+    padding: 0;
+    color: #ccc;
+}
+
+.footer-join-button {
+    background-color: #ed1c24;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-block;
+
+}
+.footer-join-button:hover {
+    background-color: #d11219;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-copyright p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #f3feff;
+}
+.footer-copyright a {
+    color: #e53935;
+}
+
+/* Mengatur Carousel di dalam footer baru */
+/* ======================================================= */
+/* === STYLE GALERI DENGAN TOMBOL & INDIKATOR DI BAWAH === */
+/* ======================================================= */
+
+/* Wadah utama galeri diberi ruang di bawah untuk tombol & indikator */
+#footerGallery {
+    position: relative;
+    /* Menambah ruang bawah agar cukup untuk indikator dan tombol */
+    padding-bottom: 80px; 
+}
+
+.footer-gallery-img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* --- Mengatur Tombol Panah --- */
+#footerGallery .carousel-control-prev,
+#footerGallery .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    opacity: 1;
+    top: auto;
+    /* Posisi tombol sedikit diangkat agar tidak terlalu jauh */
+    bottom: 10px; 
+    background-color: rgb(255, 229, 229);
+    border-radius: 50%;
+    left: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Tambahkan transisi untuk transform */
+}
+
+#footerGallery .carousel-control-prev {
+    transform: translateX(-120%); /* Digeser lebih jauh ke kiri */
+}
+
+#footerGallery .carousel-control-next {
+    transform: translateX(20%); /* Digeser lebih jauh ke kanan */
+}
+
+/* Efek hover baru: tombol sedikit membesar */
+#footerGallery .carousel-control-prev:hover,
+#footerGallery .carousel-control-next:hover {
+    background-color: rgba(237, 28, 36, 0.9);
+    transform: scale(1.1) translateX(-120%); /* Jaga posisi saat membesar */
+}
+
+#footerGallery .carousel-control-next:hover {
+    transform: scale(1.1) translateX(20%); /* Jaga posisi saat membesar */
+}
+
+/* Ikon panah (tidak berubah) */
+#footerGallery .carousel-control-prev-icon,
+#footerGallery .carousel-control-next-icon {
+    background-image: none;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 18px;
+}
+
+#footerGallery .carousel-control-prev-icon::before {
+    content: '\f053';
+}
+
+#footerGallery .carousel-control-next-icon::before {
+    content: '\f054';
+}
+
+/* --- TAMBAHAN BARU: Style untuk Indikator Slide (Titik-Titik) --- */
+#footerGallery .carousel-indicators {
+    /* Posisikan indikator di antara gambar dan tombol */
+    bottom: -35px; 
+}
+
+#footerGallery .carousel-indicators li {
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border: none;
+}
+
+/* Style untuk indikator yang sedang aktif */
+#footerGallery .carousel-indicators .active {
+    background-color: #ed1c24; /* Warna merah sesuai tema */
+}
+/* ===================================== */
+/* === STYLE UNTUK JAM INTERAKTIF === */
+/* ===================================== */
+
+#greeting {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #1016d4;
+    text-shadow: 0 0 8px rgb(236, 241, 247);
+    text-align: center;
+    margin-bottom: px;
+}
+
+
+
+.interactive-clock {
+display: flex;
+align-items: center;
+justify-content: center;
+background: transparent; /* Menghapus background /
+/ ... properti lain ... */
+}
+
+.interactive-clock:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(27, 43, 185, 0.4);
+}
+
+.time-segment {
+    font-family: 'Poppins', sans-serif;
+    /* Ukuran font angka jam dikecilkan */
+    font-size: 2.5rem; 
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 8px #272b91;
+}
+        
+.separator {
+    /* Ukuran font pemisah dikecilkan */
+    font-size: 2.2rem;
+    margin: 0 8px; /* Jarak pemisah disesuaikan */
+    color: #000000;
+    animation: blink 1.5s infinite;
+}
+
+/* Animasi kedip */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
