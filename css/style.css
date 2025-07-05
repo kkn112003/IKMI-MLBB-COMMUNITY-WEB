@@ -29,7 +29,7 @@ html {
 
 body {
     color: #666666;
-    font-size: 14px;
+    font-size: 15px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.80857;
     font-weight: normal;
@@ -492,7 +492,50 @@ button {
     margin: 0 auto;
     padding-top: 30px;
 }
+.stats_area ul {
+  /* 1. Jadikan kontainer ini sebagai flex container */
+  display: flex;
 
+  /* 2. Atur item agar berada di tengah secara horizontal */
+  justify-content: center;
+
+  /* 3. (Opsional) Atur item agar sejajar di tengah secara vertikal jika tingginya berbeda */
+  align-items: left;
+  
+  /* 4. (Opsional) Beri jarak antar item agar tidak terlalu rapat */
+  gap: 40px; /* Anda bisa sesuaikan jaraknya */
+
+  /* Hapus gaya daftar default dari <ul> */
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Tambahkan margin: 0 untuk reset */
+}/* Styling dasar untuk setiap item statistik (opsional) */
+.stats_area li {
+  text-align: left;
+  padding: 10px;
+}
+
+/* --- Style untuk Desktop (Layar Lebar) --- */
+.stats_area ul {
+  display: flex; /* Mengaktifkan Flexbox */
+  flex-direction: row; /* Mengatur item secara horizontal */
+  justify-content: space-around; /* Memberi spasi merata di antara item */
+  align-items: normal;
+  
+  /* Reset style default list */
+  list-style-type: none;
+  padding: 0px 95px;
+  margin: 0;
+}
+
+/* --- Style untuk Mobile (Layar Kecil) --- */
+/* Aturan ini akan aktif jika lebar layar 600px atau kurang */
+@media (max-width: 600px) {
+  .stats_area ul {
+    flex-direction: column; /* Mengubah susunan menjadi vertikal */
+    gap: 0px; /* Menambahkan jarak antar item saat vertikal */
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -1102,6 +1145,10 @@ textarea#comment.massage-bt::placeholder {
     background-color: #0d2d6d; /* Warna latar seperti di screenshot */
     color: white;
     flex-wrap: wrap; /* Izinkan wrap jika perlu */
+}/* === Tambahan untuk Menggeser Kolom 'Find Us' === */
+
+.footer-container .footer-column:nth-child(2) {
+  justify-self: center;
 }
 
 .footer-column {
@@ -1222,6 +1269,7 @@ textarea#comment.massage-bt::placeholder {
 .location_text {
     width: 100%;
     float: left;
+    margin-left: 20px;
 }
 
 .location_text ul {
@@ -1244,8 +1292,13 @@ textarea#comment.massage-bt::placeholder {
 .location_text li a:hover {
     color: #ed1c24;
 }
-
-.padding_left_10 {
+.col-lg-3, .col-md-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+    .padding_left_10 {
     padding-right: 10px;
     flex-shrink: 0;
 }
@@ -1286,18 +1339,15 @@ textarea#comment.massage-bt::placeholder {
 
 /* === Koreksi Jarak Kolom Find Us === */
 .footer_section .row .col-lg-3:nth-child(2) {
-    margin-left: -10px; 
+    margin-left: 0px; 
 }
-/* === Koreksi Jarak Kolom Address === */
-.footer_section .row .col-lg-3:nth-child(3) {
-    margin-left: -25px; /* Geser kolom ketiga ('Address') ke kiri. Sesuaikan nilainya. */
-}
+
 
 /* === Style untuk Bagian Join Our Community === */
 .footer_section .col-lg-3:nth-child(4) .footer_text {
     color: #ffffff; 
-    margin-bottom: 30px; 
-    margin-left: 40px;
+    margin-bottom: 20px; 
+    margin-left: 5px;
     font-size: 26px; 
     font-weight: normal; 
 }
@@ -1307,7 +1357,7 @@ textarea#comment.massage-bt::placeholder {
     font-size: 16px; 
     line-height: 1.6; 
     margin: 0 0 25px 0;
-    margin-left: 40px;
+    margin-left: 0px;
     padding: 0;
 }
 
@@ -1315,14 +1365,14 @@ textarea#comment.massage-bt::placeholder {
     background-color: #e53935; 
     color: #ffffff;
     padding: 12px 30px; 
-    margin-left: 40px;
+    margin-left: 80px;
     border-radius: 8px;
     font-size: 18px; 
     font-weight: normal;
     text-decoration: none; 
     transition: background-color 0.3s ease; 
     border: none;
-    box-shadow: 2px 2px 5px #fff); 
+    box-shadow: 2px 2px 5px #fff; 
 }
 
 .footer_section .col-lg-3:nth-child(4) .join-now-button:hover {
@@ -1460,22 +1510,6 @@ textarea#comment.massage-bt::placeholder {
     border-color: #ed1c24;
 }
 
-.footer-address-list {
-    list-style: bloc;
-    padding: 0;
-    margin: 0;
-}
-.footer-address-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    font-size: 15px;
-    overflow-wrap: break-word; /* Tetap pertahankan untuk teks panjang */
-}
-.footer-address-list i {
-    margin-right: 10px;
-    margin-top: 4px;
-}
 
 .footer-column p {
     margin: 0 0 15px 0;
@@ -1611,14 +1645,25 @@ textarea#comment.massage-bt::placeholder {
     color: #1016d4;
     text-shadow: 0 0 8px rgb(236, 241, 247);
     text-align: center;
-    margin-bottom: px;
+    margin-bottom: 5px;
+}
+.interactive_display_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Jarak antara salam, jam, dan tanggal */
+  padding: 10px;
 }
 
-
-
 .interactive-clock {
-display: flex;
+  background-color: #f0f0f0;
+  display: flex;
+  padding: 15px 35px ;
+  transition: all 0.3s ease-in-out; 
 align-items: center;
+
+  font-size: 2.5em;
+  font-weight: bold;
 justify-content: center;
 background: transparent; /* Menghapus background /
 / ... properti lain ... */
@@ -1626,7 +1671,11 @@ background: transparent; /* Menghapus background /
 
 .interactive-clock:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(27, 43, 185, 0.4);
+    box-shadow: 0 6px 20px rgba(23, 42, 207, 0.4);
+    border-radius: 50px; /* Sudut menjadi lebih melengkung */
+  background-color: #3204ff; /* Warna latar sedikit berubah */
+  cursor: pointer;
+  transform: scale(1.05); /* Efek sedikit membesar */
 }
 
 .time-segment {
@@ -1635,7 +1684,7 @@ background: transparent; /* Menghapus background /
     font-size: 2.5rem; 
     font-weight: 600;
     color: #ffffff;
-    text-shadow: 0 0 8px #272b91;
+    text-shadow: 0 0 20px #272b91;
 }
         
 .separator {
@@ -1654,4 +1703,166 @@ background: transparent; /* Menghapus background /
     50% {
         opacity: 0.4;
     }
+}  
+/* ===================================== */
+/* === STYLE UNTUK LAYAR LOADING === */
+/* ===================================== */
+
+#loader-wrapper {
+  position: fixed; /* Membuatnya tetap di posisi yang sama saat di-scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d1b4c; /* Warna latar (sesuaikan dengan tema Anda) */
+  
+  /* Gunakan flexbox untuk menengahkan spinner */
+  display: flex;
+  flex-direction: column; /* Membuat tulisan 'Loading' di bawah spinner */
+  justify-content: center;
+  align-items: center;
+  
+  z-index: 9999; /* Pastikan berada di atas semua elemen lain */
+  transition: opacity 0.75s, visibility 0.75s; /* Transisi untuk fade-out */
 }
+
+/* Animasi Spinner */
+.loader {
+  border: 8px solid #f3f3f3; /* Lingkaran abu-abu muda */
+  border-top: 8px solid #ed1c24; /* Warna merah untuk bagian yang berputar */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite; /* Animasi berputar */
+}
+
+/* Tulisan di bawah spinner */
+#loader-wrapper p {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Keyframes untuk animasi berputar */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Kelas untuk menyembunyikan loader dengan efek fade */
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+} 
+/* =================================================================
+   CUSTOM STYLES FOR CONTACT PAGE
+================================================================= */
+
+/* --- Container dan Judul Utama --- */
+.contact_section {
+    width: 100%;
+    float: left;
+    background-color: #ffffff; /* Warna latar belakang putih untuk section ini */
+    padding: 90px 0;
+}
+
+.contact_taital {
+    font-size: 40px;
+    color: #1e2a4a; /* Warna biru tua sesuai tema */
+    font-weight: 800; /* Menggunakan font-weight dari tema 'Sen' */
+    font-family: 'Sen', sans-serif;
+    margin-bottom: 20px;
+}
+
+.contact_text {
+    font-size: 16px;
+    color: #333; /* Warna teks yang mudah dibaca */
+    line-height: 1.8;
+}
+
+/* --- Map Section --- */
+.map_section {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+}
+
+/* --- FAQ Accordion Styles --- */
+#faqAccordion .card {
+    border: 1px solid #dee2e6; /* Garis batas halus untuk setiap kartu */
+    border-radius: 5px;
+    margin-bottom: 15px; /* Jarak antar pertanyaan */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Bayangan halus */
+}
+
+#faqAccordion .card-header {
+    background-color: #f8f9fa; /* Latar belakang header yang netral */
+    padding: 0;
+    border: none;
+}
+
+#faqAccordion .btn-link {
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+    color: #1e2a4a; /* Warna teks pertanyaan biru tua */
+    font-weight: 700;
+    padding: 15px 20px;
+}
+
+#faqAccordion .btn-link:hover {
+    text-decoration: none;
+    color: #e64a19; /* Warna oranye saat di-hover */
+}
+
+/* Menambahkan ikon + dan - pada accordion */
+#faqAccordion .btn-link::after {
+    content: '\f067'; /* FontAwesome icon for plus */
+    font-family: 'FontAwesome';
+    float: right;
+    transition: all 0.3s;
+}
+
+#faqAccordion .btn-link[aria-expanded="true"]::after {
+    content: '\f068'; /* FontAwesome icon for minus */
+    transform: rotate(180deg);
+}
+
+#faqAccordion .card-body {
+    color: #333;
+    font-size: 16px;
+    background-color: #fff;
+    border-top: 1px solid #dee2e6;
+    line-height: 1.7;
+}
+
+
+/* --- Tombol "Join Now" di Footer --- */
+.join-now-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e64a19; /* Warna oranye sesuai tombol di screenshot */
+    color: #ffffff !important; /* Paksa warna teks menjadi putih */
+    font-weight: normal;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none !important;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.join-now-button:hover {
+    background-color: #d84315; /* Warna oranye lebih gelap saat di-hover */
+    color: #ffffff !important;
+    transform: translateY(-2px); /* Efek sedikit terangkat */
+}
+
+/* --- Penyesuaian gambar di Carousel Footer --- */
+.footer-carousel-img {
+    height: 200px; /* Atur tinggi gambar agar seragam */
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa distorsi */
+    border-radius: 5px;
+}
+
