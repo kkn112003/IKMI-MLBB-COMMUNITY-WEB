@@ -17,7 +17,7 @@
  .location_text li {
         font-size: 14px;
         color: #ffffff;
-        padding: 0px 0px 10px 0px;
+        padding: 0px 0px 0px 0px;
     }
 
     
@@ -29,8 +29,9 @@
     
     /* Menengahkan semua konten di dalam kolom footer */
     .footer_main {
-        text-align: center;
-        margin-bottom: 40px; /* Menambah jarak bawah antar kolom saat menumpuk */
+        text-align: left;
+        margin-left: 20px;
+        margin-bottom: 25px; /* Menambah jarak bawah antar kolom saat menumpuk */
     }
 
     /* Memastikan list address juga rata tengah di mobile */
@@ -46,12 +47,13 @@
     }
 }
 
+
 /* CSS Dasar untuk Footer */
 .footer_main .social_icon ul,
 .footer_main .location_text ul {
     list-style: none; /* Menghilangkan bullet points */
     padding: 0;       /* Menghilangkan padding default dari list */
-    margin: 0;
+    margin: -10px;
 }
 
 .footer_main .footer_text {
@@ -62,7 +64,7 @@
 /* Styling untuk list ikon sosial */
 .footer_main .social_icon li {
     display: inline-block; /* Membuat ikon berjajar horizontal */
-    margin: 0 10px;
+    margin: 0 0px;
 }
 
 .footer_main .social_icon a {
@@ -232,7 +234,7 @@
     }
 
     .footer_main {
-        width: 70%;
+        width: 100%;
         float: right;
     }
 
@@ -698,12 +700,12 @@
     }
 
     .footer_main {
-        width: 70%;
+        width: 100%;
         float: left;
     }
 
     .footer_text {
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
 }
