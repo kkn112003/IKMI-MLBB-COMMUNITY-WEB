@@ -27,8 +27,17 @@
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/loading.js"></script>
+</body>
+</html>
    </head>
-   <body>
+      <body>
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+        <p>Loading...</p>
+    </div>
       <div class="header_section">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -104,7 +113,7 @@
                         <div class="row">
                            <div class="col-md-6">
                               <h1 class="banner_taital">IKMI <br>CIREBON MLBB COMMUNITY</h1>
-                              <div class="read_bt"><a href="#">Go To Channel</a></div>
+                              <div class="read_bt"><a href="https://www.youtube.com/@ikmicirebonmlbb3111/streams">Go To Channel</a></div>
                            </div>
                            <div class="col-md-6">
                               <div class="banner_img"><img src="images/Floryn.png"></div>
@@ -125,32 +134,34 @@
       </div>
       <!-- header section end -->
        <!-- domain section start -->
-      <div class="domain_section">
-         <div class="container">
-            <div class="domain_box">
-               <div class="domain_rate">
-                  <ul>
-<div class="dynamic-impact-container">
-    <div id="date-display">
-        <span id="day-of-week"></span>, <span id="full-date"></span>
-    </div>
-    
-    <h1 id="greeting"></h1>
+<div class="domain_section">
+    <div class="container">
+        <div class="domain_box">
+            <div class="interactive_display_area">
+                <div id="date-display">
+                    <span id="day-of-week"></span>, <span id="full-date"></span>
+                </div>
+                <h1 id="greeting"></h1>
+                <div class="interactive-clock">
+                    <span id="hours" class="time-segment">00</span>
+                    <span class="separator">:</span>
+                    <span id="minutes" class="time-segment">00</span>
+                    <span class="separator">:</span>
+                    <span id="seconds" class="time-segment">00</span>
+                </div>
+            </div>
 
-    <div class="interactive-clock">
-        <span id="hours" class="time-segment">00</span>
-        <span class="separator">:</span>
-        <span id="minutes" class="time-segment">00</span>
-        <span class="separator">:</span>
-        <span id="seconds" class="time-segment">00</span>
+            <div class="stats_area">
+                <ul>
+                    <li><a href="#"><span style="color: #8b2791;">176+</span>Members</a></li>
+                    <li><a href="#"><span style="color: #8b2791;">16+</span>Team</a></li>
+                    <li><a href="#"><span style="color: #8b2791;">190+</span>Tournament</a></li>
+                </ul>
+            </div>
+
+        </div>
     </div>
 </div>
-<li><a href="#"><span style="color: #8b2791;">176+</span> Members</a></li>
-  <li><a href="#"><span style="color: #8b2791;">16+</span> Team</a></li>
-                     <li><a href="#"><span style="color: #8b2791;">190+</span> Tournament</a></li>
-            </div>
-         </div>
-      </div>
       <!-- domain section end -->
       <!-- about section start -->
       <div class="about_section layout_padding">
@@ -192,7 +203,7 @@
                   <div class="click_bt"><a href="about.html">Click Here</a></div>
                </div>
                <div class="col-md-6">
-                  <div class="hosting_img"><img src="images/about.png"></div>
+                  <div class="hosting_img"><img src="images/about-bg.png"></div>
                </div>
             </div>
          </div>
@@ -248,7 +259,7 @@
                </a>
             </div>
             </div>
-         <div class="col-lg-3 col-md-6">
+         <div class="col-lg-3 col-md-6 footer-column-centered">
             <div class="footer_main">
                <h3 class="footer_text">Find Us</h3>
                <div class="social_icon">
@@ -390,7 +401,7 @@ updateClock();
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="script.js"></script>    
 </body>
 </html>
    </body>
